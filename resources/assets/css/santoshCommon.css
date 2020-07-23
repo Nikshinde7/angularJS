@@ -1,0 +1,122 @@
+  fieldset.scheduler-border {
+    /*border: 1px groove #ddd !important;*/
+    border: black 1px solid;
+    height: auto;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+    border-radius: 20px 20px 20px 20px;
+}
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 20px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+    background-color: gray;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 18px;
+    color: #fff;
+}
+     .md-datepicker-input-container {
+  width: 90%;
+  margin-left: 0px;
+}
+
+
+h1 {
+    /*text-shadow: 2px 2px blue;*/
+    /*font-style:bold;*/
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.btnRound
+{
+    border-radius: 10px 10px 10px 10px;
+}
+
+.tableFontSize
+{
+    font-size: 12px;
+}
+
+.input
+{
+  border-radius: 10px 10px 10px 10px;
+  font-size: 15px;
+  background-color: #fff;
+  /*border-color: rgb(225,0,0);*/
+}
+
+::placeholder {
+   
+    font-color: #fff;
+    /*opacity: 1;  Firefox */
+    font-size:11px;
+    text-align: center;
+}
+
+
+
+.btn-arrow-right,
+.btn-arrow-left {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btn-arrow-right {
+    padding-left: 36px;
+}
+.btn-arrow-left {
+    padding-right: 36px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after,
+.btn-arrow-left:before,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top:6px; /* move it down because of rounded corners */
+    width: 20px; /* same as height */
+    height: 20px; /* button_outer_height / sqrt(2) */
+    background: inherit; /* use parent background */
+    border: inherit; /* use parent border */
+    border-left-color: transparent; /* hide left border */
+    border-bottom-color: transparent; /* hide bottom border */
+    border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before,
+.btn-arrow-left:after {
+    transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:before,
+.btn-arrow-left:before { /* align the "before" square to the left */
+    left: -12px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+    right: -12px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before { /* bring arrow pointers to front */
+    z-index: 1;
+}
+.btn-arrow-right:before,
+.btn-arrow-left:after { /* hide arrow tails background */
+    background-color: white;
+}

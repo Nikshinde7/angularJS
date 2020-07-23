@@ -1,0 +1,228 @@
+  fieldset.scheduler-border {
+    /*border: 1px groove #ddd !important;*/
+  /*  border:  #808080 2px solid;
+    height: auto;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+    border-radius: 20px 20px 20px 20px;
+
+*/
+
+
+}
+
+div .panel-heading
+{
+  font-family: Times New Roman, Times, serif;
+  font-size: 150%;
+  color: black;
+}
+
+.panel-heading
+{
+  font-family: Times New Roman, Times, serif;
+  font-size: 150%;
+  color: black; 
+}
+
+body
+{
+    /*background-image: url("");*/
+    background-color: #fff;
+}
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 20px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+    /*background-color: #808080;*/
+    border-radius: 5px 5px 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+    border:  #808080 1px solid;
+}
+     .md-datepicker-input-container {
+  width: 90%;
+  margin-left: 0px;
+}
+
+
+input[type="date"]
+{ 
+    padding: 0%;
+    padding-left: 30%;
+}
+
+label
+{
+    color:  #0a0a0f;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 90%;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+
+/*.textareaCss
+{
+   border: 3px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+
+
+}
+
+
+*/
+
+th,td
+{
+  color: #000;
+}
+
+
+
+
+h1 {
+    /*text-shadow: 2px 2px blue;*/
+    /*font-style:bold;*/
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.btnRound
+{
+    /*border-radius: 1px 1px 1px 1px;*/
+}
+
+.tableFontSize
+{
+    font-size: 12px;
+}
+
+.input
+{
+  border-radius: 10px 10px 10px 10px;
+  font-size: 15px;
+  background-color: #fff;
+  /*border-color: rgb(225,0,0);*/
+}
+
+::placeholder {
+   
+    color: #fff;
+
+    font-size:15px;
+    text-align: center;
+}
+
+
+
+/*=============================================================================================================================*/
+
+/*Save Clear Cancel Button Css*/
+
+
+
+
+.button {
+  float: left;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid #000;
+
+}
+
+
+
+
+/* Wapasha */
+.button.button--wapasha {
+  background: #37474f;
+  color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button--wapasha.button--inverted {
+  background: #d9edf7;
+  color: #37474f;
+}
+.button--wapasha::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #3f51b5;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transform: scale3d(0.6, 0.6, 1);
+  transform: scale3d(0.6, 0.6, 1);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--wapasha.button--inverted::before {
+  border-color: #7986cb;
+}
+.button--wapasha:hover {
+  background-color: #fff;
+  color: #3f51b5;
+}
+.button--wapasha.button--inverted:hover {
+  background-color: #37474f;
+  color: #7986cb;
+}
+.button--wapasha:hover::before {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.button--round-l.button--quidel::after {
+  border-radius: 40px;
+}
+
+.button--round-l
+{
+  border-radius: 40px;
+}
+ 
+
+ .button--text-thick {
+  font-weight: 600;
+}
+
+
+.button--winona.button--inverted {
+  color: #7986cb;
+}
+.button--winona.button--inverted:after {
+  color: #fff;
+}

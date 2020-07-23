@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Popup Timepicker Demo Using AngularJS, Bootstrap</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<meta name="description"
+	content="Popup Timepicker Demo Using AngularJS, Bootstrap.">
+
+
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<script
+	src="angular.js"></script>
+<script
+	src="angular-resource.js"></script>
+<script
+	src="angular-route.js"></script>
+
+<script
+	src="ui-bootstrap-tpls.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="timepickerpop.js"></script>
+
+<script type="text/javascript">
+	angular.module('timepickerDemo', [ 'timepickerPop' ]).controller(
+			'DemoCtrl', function($scope) {
+				$scope.mytime = new Date();
+				$scope.showMeridian = true;
+
+			});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3812921-2', 'mytechtip.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+
+	<div class="container" ng-app="timepickerDemo">
+
+		<div class="col-md-2"></div>
+		<div class="col-md-8" ng-controller='DemoCtrl'>
+
+			<h1>Popup Timepicker Demo</h1>
+
+			<div class='well'>
+				<form name='form' class='form-horizontal' role='form'>
+
+					<div class='form-group'>
+						<label class='col-sm-3 control-label'>Timepicker</label>
+						<div class='col-sm-9'>
+							<timepicker ng-model="mytime" show-meridian='showMeridian'/>
+						</div>
+					</div>
+
+					<div class='form-group'>
+						<label class='col-sm-3 control-label'>Popup Timepicker</label>
+						<div class='col-sm-4'>
+							<timepicker-pop input-time="mytime" class="input-group"
+								show-meridian='showMeridian'> </timepicker-pop>
+						</div>
+					</div>
+
+					<div class='form-group'>
+						<div class="col-sm-offset-3 col-sm-9">
+							<div class="checkbox">
+								<label> <input type="checkbox" name='showMeridian' ng-model='showMeridian' />
+									Show meridian ({{showMeridian}})
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class='form-group'> 
+						<div class="col-sm-offset-3 col-sm-9">Value: {{mytime | date: 'shortTime'}}</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="col-md-2"></div>
+	</div>
+</body>
+</html>

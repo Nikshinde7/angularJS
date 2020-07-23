@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>AdminLTE 2 | UI Sliders</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div ng-controller="headerCntrl">
+      
+      
+      
+  <div class="headerbgcolor">
+<header class="main-header">
+    <!-- Logo -->
+    <a ui-sref="dashboard" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini" ><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>BDM</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    
+        
+        <input type="hidden" ng-model="headerObj.staffId">
+        <input type="hidden" ng-model="headerObj.branchId">
+
+  <div class="col-sm-3"></div>
+        <div class="col-sm-4" style="padding-top: 0.5%;">
+    <!--<select class="form-control" ng-model="enqWiseFollowUpObj.status1" name="branch">
+                                        <option value="" selected>Select Branch</option>
+                                        <option ng-value="branch" ng-repeat="branch in branchList">{{branch.branchName}}</option>
+                                        </select>-->
+      
+      
+     <center> <label class=" col-form-label" style="font-size: 20px; color:white"> Branch : <b style="color: yellow;  ">{{brachObj1.branchName}}</b></label></center>
+                                   
+                               
+      </div> 
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a data-toggle="tooltip" title="DateWise-appointment notification" href="" ng-click="getDateWiseAppointCountListFun()" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">{{getDateWiseAppointCount}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have {{getDateWiseAppointCount}} Appointment</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu" ng-repeat="row in getDateWiseAppointCountList">
+                  <li><!-- start message -->
+                    <a ui-sref="displayDailyAppointment">
+                      <div class="pull-left">
+                        <img src="resources/assets/images/s.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        {{row.businessName}}
+                        <small><i class="fa fa-clock-o"></i> {{row.apptTime}}</small>
+                      </h4>
+                      <p>{{row.clientName}}</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+              </li>
+              <li class="footer"><a ui-sref="displayDailyAppointment">See All Appointment</a></li>
+            </ul> 
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+         <!--  <li class="dropdown notifications-menu">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning"> {{headerObj.leadcount}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header" ui-sref="displayDailyLead"> Today You have {{headerObj.leadcount}} Leads
+                </li>
+              
+            </ul>
+          </li> -->
+
+          <li class="dropdown messages-menu">
+            <a data-toggle="tooltip" title="Lead notification" href="" ng-click="getDailyLeadFollowupList(dailyLeadObj)" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">{{headerObj.leadcount}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have {{headerObj.leadcount}} Lead Follow-up</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu" ng-repeat="row in LeadList">
+                  <li><!-- start message -->
+                    <a ui-sref="displayDailyLead">
+                      <div class="pull-left">
+                        <img src="resources/assets/images/s.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        {{row.businessName}}
+                        <small><i class="fa fa-calendar-o"></i> {{row.nextfollowupDate}}</small>
+                      </h4>
+                      <p>{{row.clientName}}:-{{row.contactNo1}}</p>
+                      
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+              </li>
+              <li class="footer"><a ui-sref="displayDailyLead">See All Lead Follow-up</a></li>
+            </ul> 
+          </li>
+
+
+         
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="resources/assets/images/user2-160x160.jpg" class="user-image" alt="User Image "/>
+              <span class="hidden-xs">{{headerObj.staffName}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="resources/assets/images/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+
+                <p>
+                 {{headerObj.staffName}}
+                  <!-- <small>Designation : {{}}</small> -->
+                </p>
+              </li>
+              <!-- Menu Body -->
+             <!--  <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="">Friends</a>
+                  </div>
+                </div> -->
+                <!-- /.row 
+              </li>-->
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a HREF="javascript:location.replace('#login')" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+</div>
+</body>
+</html>
